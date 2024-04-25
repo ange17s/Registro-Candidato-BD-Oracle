@@ -1,0 +1,113 @@
+:root{
+    --wine: #87254e;
+    --dark: #04030F;
+    --purple: #776885;
+    --light: #C3B6D0; 
+    --white: #E9E2F0; 
+    background-color: var(--wine);
+    --text: 'Quintessential', cursive !important;
+    font-family: var(--text);
+    color: var(--dark);
+}
+
+#menu{
+    text-align: center;
+    position: sticky;
+    top: 0;
+    padding: 15px;
+    margin: 0;
+    background-color: var(--wine);
+    border-top: 5px solid var(--dark);
+    border-bottom: 5px solid var(--dark);
+}
+
+#tipo-documento{
+    padding: 5px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--light);
+    margin: 1px 0 0 0;
+    padding: 0.5px;
+}
+
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--dark);
+}
+
+#centrado{
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group input[type="submit"] {
+    background-color: #4caf50;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    height: 50px;
+    width: 300px;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: var(--purple);
+}
+
+.form-group input:hover {
+    border: 2px solid var(--dark);
+}
+
+.botonNav{
+    background-color: var(--light);
+    height: 40px;
+    margin-right: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    width: 200px;
+}
+
+#buscador{
+    margin-right: 40px;
+    height: 40px;
+    border-radius: 50px;
+    text-align: center;
+    background-color: var(--light);
+    border: 2px solid var(--dark);
+    color: var(--dark);
+}
+
+#buscador:hover{
+    background-color: var(--purple);
+    color: var(--dark);
+}
+
+.botonNav:hover{
+    background-color: var(--purple);
+    color: var(--dark);
+}

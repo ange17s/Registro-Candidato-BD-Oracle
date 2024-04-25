@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Datos Personales</title>
+    <link rel="stylesheet" href="{{url_for('static', path='/CSS/estilos.css')}}">
+
+</head>
+<body>
+    <main>
+
+        <div id="menu">
+            <nav>
+                <button class="botonNav">Inicio</button>
+            <button class="botonNav">Acerca de nosotros</button>
+            <input id="buscador" type="text" placeholder="Buscar">
+            <button class="botonNav">Notificaciones</button>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="form-group" id="centrado">
+            <h2>Resgistro de candidato</h2>
+        </div>
+        
+        <form id="personal-info-form" method="POST" action="/candidatos">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="usuario" placeholder="Usuario" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha-nacimiento" name="fecha_nacimiento" required>
+            </div>
+            <div class="form-group">
+                <label for="tipo-documento">Tipo de Documento:</label>
+                <select id="tipo-documento" name="tipo_documento" required>
+                    <option value="">Seleccione...</option>
+                    <option value="CC">Cedula de ciudadania</option>
+                    <option value="TI">Tarjeta de identidad</option>
+                    <option value="CE">Cédula de extranjería</option>
+                    <option value="NIT">NIT</option>
+                    <option value="PAS">Pasaporte</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="numero-documento">Número de Documento:</label>
+                <input type="text" id="numero-documento" name="numero_documento" placeholder="Numero de Documento" required>
+            </div>
+            <div class="form-group" id="centrado">
+                <input type="submit" value="Registrar">
+            </div>    
+            <script >
+                validarCandidato()
+            </script>
+        </form>
+    </div>
+</main>
+<script>
+    // Asignar el valor de alertaCandidato a una variable JavaScript
+    var alertaCandidato = "{{ alertaCandidato }}";
+    
+    // Verificar si alertaCandidato es "True" y mostrar el alerta correspondiente
+    if (alertaCandidato === "True") {
+        alert("¡Candidato ya registrado!");
+    }else{
+        alert("¡Candidato registrado!");
+    }
+</script>
+</body>
+</html>
